@@ -1,0 +1,218 @@
+body{
+	background:#f2f2f2;
+	background: linear-gradient(#f2f2f2, yellow);
+	background-repeat:no-repeat;
+	height:95vh;
+	width:98vw;
+}
+
+#wrapper{
+	height:100%;
+	display:grid;
+	width:90%;
+	margin: 0 auto;
+	grid-gap:10px;
+	grid-template-rows:80px 70px auto 30px;
+	
+	grid-template-areas: 
+	  "header"
+	  "nav"
+	  "content"
+	  "sidebar1" 
+	  "sidebar2"
+	  "footer";	
+}
+
+
+
+header{
+	display:grid;
+	grid-area:header;
+	background-color:#a5a5a5;
+	color:#fafafa;
+	grid-row-start:header;
+	grid-row-end:header;
+	text-align:center;	
+}
+
+header>h1{
+	font-size:2.5em;
+	font-family:Verdana, arial;
+	text-align: center;
+	margin:0;
+	line-height:2;
+}
+
+main{
+	display:grid;
+	grid-area:content;
+	outline: 1px solid green;
+	overflow:scroll;
+	background-color:#f2f2f2;
+	padding:10px;
+}
+
+#sida3 #wrapper{
+	grid-template-columns:3fr 1fr;
+	grid-gap:10px;
+	grid-template-rows:80px 70px auto 30px;
+	grid-template-areas:
+		"header header"
+		"nav nav"
+		"content sidebar2"
+		"footer footer";
+}
+
+#produkter #content{
+		margin:0 auto;
+		width: 100%;
+}
+
+nav{
+	display:grid;
+	grid-area:nav;
+	grid-row-start:nav;
+	grid-row-end:nav;
+	color:#f2f2f2;
+	font-size:1.1em;
+	font-family:cursive;
+	font-weight:bold;
+}
+
+nav ul{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	padding:0;
+	margin:0;
+	list-style-type:none;	
+}
+
+nav a{
+	text-decoration: none;
+}
+
+#admin ul{
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+		
+}
+
+nav li{
+	display:grid;
+	text-align:center;
+	border: 4px outset #323232;
+	border-radius:10%;
+	background: red;
+	background: linear-gradient(red, yellow);
+	height:88%;
+	line-height:2.3;
+}
+
+nav li:hover{
+	border:4px inset yellow;	
+}
+
+aside{
+	display:grid;
+	grid-area:sidebar2;
+	text-align:right;
+	background-color:#a5a5a5;
+	color:#fafafa;
+	text-align:center;
+}
+
+footer{
+	display:grid;
+	grid-area:footer;
+	background-color:#a5a5a5;
+	color:#fafafa;
+	grid-row-start:footer;
+	grid-row-end:footer;
+	text-align:center;
+	line-height:1.7;
+}
+
+
+#produkter h2, #sida3 h2{
+	text-align: center;
+	color:black;
+	font-size: 2em;
+	margin-top:0;
+}
+
+#produkter table{
+	width:90%;
+	border: 3px solid red;
+	border-collapse: collapse;
+	margin:0 auto;
+}
+
+#produkter thead{
+		font-size: 1.5em;
+}
+
+#produkter tbody{
+		font-size: 1.2em;
+}
+
+#produkter td, #produkter th{
+	border: 1px solid red;
+	padding-left:20px;
+}
+
+
+#produkter th:nth-child(1){
+	text-align: left;	
+}
+
+#produkter td:nth-child(3), #produkter td:nth-child(4), #produkter td:nth-child(5){
+	text-align: center;
+}
+
+#produkter table a:link, #produkter table a:visited, #produkter table a:focus, #produkter table a:active{
+	color:black;
+}
+
+#produkter table img{
+	height:60px;
+}
+
+#sida3 figure{
+	float:left;
+	height:100px;
+}
+
+#sida3 figure img{
+	height:100px;
+}
+
+#login main{
+	margin:auto;
+	width:75%;
+	background-color:#f2f2f2;
+	color: black;
+	margin-bottom: 10px;
+}
+
+#login form{
+	color:#2f2f2f;
+}
+
+#login label{
+	 display:inline-block;
+		text-align:right;
+		padding-right:10px;
+		width:120px;
+}
+
+#login input[type="submit"], .create{
+	    margin-left:132px;
+}
+
+#login .create> a{
+		color:black;
+}
+
+#login h2{
+	  color: black;			
+}
